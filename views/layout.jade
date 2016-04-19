@@ -16,3 +16,17 @@ html
     //- script(href='/javascripts/myscripts.js')
   body
     block content
+    .container
+      nav.navbar.navbar-default.navbar-fixed-top
+        .navbar-header
+          a.navbar-brand(href='/')
+            span.glyphicon.glyphicon-flag(aria-hidden='true')
+        .navbar-header
+          h4 Friendface
+        .nav.nav-tabs
+          li.active(role='presentation')
+            a(href='/') Home
+          li(role='presentation')
+            a(href='/users') All Users
+          li(role='presentation')
+            a(href='/users/:id') Me
