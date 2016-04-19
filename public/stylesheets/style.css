@@ -46,3 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 .splashdiv {
   text-align: center;
 }
+
+#loginForm {
+  margin-top: 20px;
+}
+
+#registerButton {
+  margin-top: 20px;
+}
