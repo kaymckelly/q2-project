@@ -1,7 +1,46 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title Friendface
+    // Bootstrap jQuery
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    // Bootstrap theme: Spacelab
+    link(href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/spacelab/bootstrap.min.css', rel='stylesheet')
+    // Bootstrap JS
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    // Google font
+    link(href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono', type='text/css', rel='stylesheet')
+    // personal stylesheet
+    link(href='/stylesheets/style.css', type='text/css', rel='stylesheet')
+    // personal JS - not yet made but likely will be in the future
+    //- script(href='/javascripts/myscripts.js')
   body
     block content
+    .container
+      nav.navbar.navbar-default.navbar-fixed-top
+        .navbar-header
+          a.navbar-brand.navFlag(href='/')
+            span.glyphicon.glyphicon-flag(aria-hidden='true')
+        .navbar-header
+          h3.navTitle Friendface
+        a.navbar-brand
+          span.glyphicon.glyphicon-flag.navFlag(aria-hidden='true')
+        .nav.nav-tabs
+          li.active.navmenu(role='presentation')
+            a(href='/') Home
+          li.navmenu(role='presentation')
+            a(href='/users') All Users
+          li.navmenu(role='presentation')
+            a(href='/users/:id') Me
+          ul.nav.navbar-nav.navbar-header.navbar-right
+            li.dropdown
+              a.drop-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                span.glyphicon.glyphicon-off.btn-sm.btn-info.navDrop(aria-hidden='true')
+              ul.dropdown-menu
+                li
+                  a(href='#') Log In
+                li.divider(role='separator')
+                li
+                  a(href='#') Log Out
