@@ -6,7 +6,7 @@ var passport = require('passport');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.render('users', { title: 'Friendface Users' });
-
+})
 
 router.get('/signup', function(req, res, next) {
   res.render('signup');
