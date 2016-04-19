@@ -1,4 +1,4 @@
-/*General Body Styling*/
+/* ------------- General Body Styling ------------- */
 body {
   padding: 50px;
   padding-top: 70px;
@@ -15,18 +15,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*Navigation Bar*/
-.navtitle {
-  margin-top: 11px;
+/* ------------- Navigation Bar ------------- */
+.navTitle {
+  margin-top: 23px;
   text-shadow: 0 0 5px #00B7FF;
 }
 
+.navFlag {
+  margin-top: 10px;
+}
+
 .navmenu {
-  margin-top: 9px;
+  margin-top: 20px;
+}
+
+/*.navButtonRight {
+  margin-right: 20px;
+}*/
+
+.navDrop {
+  margin-right: 20px;
 }
 
 
-/*Splash Page*/
+/* ------------- Splash Page ------------- */
 .splashhead {
   text-align: center;
 }
@@ -54,3 +66,6 @@ h1, h2, h3, h4, h5, h6 {
 #registerButton {
   margin-top: 20px;
 }
+
+
+/* ------------- All Users Page ------------- */
