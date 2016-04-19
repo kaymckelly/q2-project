@@ -11,7 +11,7 @@ html
     // Bootstrap JS
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
     // Google font
-    //- link(href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' type='text/css' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono', type='text/css', rel='stylesheet')
     // personal stylesheet
     link(href='/stylesheets/style.css', type='text/css', rel='stylesheet')
     // personal JS - not yet made but likely will be in the future
@@ -24,11 +24,13 @@ html
           a.navbar-brand(href='/')
             span.glyphicon.glyphicon-flag(aria-hidden='true')
         .navbar-header
-          h4 Friendface
+          h3.navtitle Friendface
+        a.navbar-brand
+          span.glyphicon.glyphicon-flag(aria-hidden='true')
         .nav.nav-tabs
-          li.active(role='presentation')
+          li.active.navmenu(role='presentation')
             a(href='/') Home
-          li(role='presentation')
+          li.navmenu(role='presentation')
             a(href='/users') All Users
-          li(role='presentation')
+          li.navmenu(role='presentation')
             a(href='/users/:id') Me

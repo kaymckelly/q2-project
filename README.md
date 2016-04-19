@@ -4,3 +4,4 @@
 - add .gitignore
 - configure bootstrap in layout.jade
 - add navbar to main page
+- 

@@ -1,6 +1,9 @@
+/*General Body Styling*/
 body {
   padding: 50px;
+  padding-top: 70px;
   font-family: "Droid Sans Mono", Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -9,4 +12,37 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Sans Mono", Arial, sans-serif;
+}
+
+
+/*Navigation Bar*/
+.navtitle {
+  margin-top: 11px;
+  text-shadow: 0 0 5px #00B7FF;
+}
+
+.navmenu {
+  margin-top: 9px;
+}
+
+
+/*Splash Page*/
+.splashhead {
+  text-align: center;
+}
+
+.pagetitle {
+  font-size: 80px;
+  font-stretch: expanded;
+  text-shadow: 0 0 20px #00B7FF;
+}
+
+.splashimg {
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 40px;
+}
+
+.splashdiv {
+  text-align: center;
 }
