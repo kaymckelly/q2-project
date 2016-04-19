@@ -4,9 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+
+var port = process.env.PORT || 5000;
+
+// require('./config/passport')(passport);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var auth = require('./routes/auth');
 
 var app = express();
 
@@ -22,8 +28,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 app.use('/', routes);
 app.use('/users', users);
+app.use('/login', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,5 +67,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(port, () => {
+  console.log('listening on ' + port);
+})
 
 module.exports = app;

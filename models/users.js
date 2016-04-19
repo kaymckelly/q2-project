@@ -19,7 +19,7 @@ Users.createUser = (userData, callback) => {
         callback(undefined, user);
       });
     }
-  }
+  });
 }
 
 Users.authenticateUser = (email, password, callback) => {
@@ -35,4 +35,16 @@ Users.authenticateUser = (email, password, callback) => {
   })
 }
 
-module.exports = User;
+Users.findById = (userId) => {
+  Users().where({ id: userId }).first().then((user) => {
+    return user;
+  });
+}
+
+Users.findByEmail = (userEmail) => {
+  Users().where({ email: userEmail }).first().then((user) => {
+    return user;
+  });
+}
+
+module.exports = Users;
