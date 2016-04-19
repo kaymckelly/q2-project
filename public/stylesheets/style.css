@@ -69,3 +69,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ------------- All Users Page ------------- */
+.userpic {
+  border-radius: 100px;
+  max-width: 50%;
+}
+
+.userBox {
+  text-align: center;
+}

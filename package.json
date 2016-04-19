@@ -23,13 +23,19 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vMarkham/q2-project.git"
+    "url": "git+https://github.com/dianakim/q2-project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vMarkham/q2-project/issues"
+    "url": "https://github.com/dianakim/q2-project/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/vMarkham/q2-project#readme"
+=======
+  "homepage": "https://github.com/dianakim/q2-project#readme"
+  }
+
+>>>>>>> 20047da8b7942a9aa0e48458bc025e7860a85daf
 }
