@@ -89,3 +89,26 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #00B7FF;
   padding: 10px;
 }
+
+
+/* ------------- Profile Page ------------- */
+.userpic {
+  border-radius: 25px;
+  max-width: 75%;
+}
+
+.status {
+  border-radius: 25px;
+  border: 1px solid #00B7FF;
+  padding: 15px;
+}
+
+#addContactButton {
+  margin-bottom: 10px;
+}
+
+.profileButtons {
+}
+
+
+/* ------------- Edit Profile Page ------------- */
