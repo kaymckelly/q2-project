@@ -1,5 +1,21 @@
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
+var passport = require('../config/passport');
+
+router.get('/signup', function(req, res, next) {
+  res.render('signup');
+});
+
+router.post('/signup', passport.authenticate('local-signup', {
+  successRedirect: '/profile',
+  failureRedirect: '/signup'
+}));
+
+router.get('/profile', (req, res) => {
+  res.render('profile', { user: req.user });
+});
+=======
 var passport = require('passport');
 var knex = require('../db/knex');
 
@@ -72,5 +88,6 @@ router.post('/signup',
     successRedirect: '/profile',
     failureRedirect: '/signup'
   }));
+>>>>>>> 176f246f239d2e336dc8ea6d97cb8cc79b96c072
 
 module.exports = router;

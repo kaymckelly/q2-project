@@ -1,4 +1,4 @@
-const knex = require('knex');
+const knex = require('../db/knex');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
@@ -12,11 +12,12 @@ Users.createUser = (userData, callback) => {
       return callback(err);
     }
     else {
-
       userData.password_digest = hash;
       delete userData.password;
       Users().insert(userData, '*').then((user) => {
-        callback(undefined, user);
+        callback(undefined, user[0]);
+      }).catch((err) => {
+        return callback(err);
       });
     }
   });
@@ -36,15 +37,11 @@ Users.authenticateUser = (email, password, callback) => {
 }
 
 Users.findById = (userId) => {
-  Users().where({ id: userId }).first().then((user) => {
-    return user;
-  });
+  return Users().where({ id: userId }).first();
 }
 
 Users.findByEmail = (userEmail) => {
-  Users().where({ email: userEmail }).first().then((user) => {
-    return user;
-  });
+  return Users().where({ email: userEmail }).first();
 }
 
 module.exports = Users;
