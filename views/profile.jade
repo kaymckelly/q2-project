@@ -16,7 +16,7 @@ block content
         li.navmenu(role='presentation')
           a(href='/users') All Users
         li.active.navmenu(role='presentation')
-          a(href='/users/:id') Me
+          a(href='/profile') Me
         ul.nav.navbar-nav.navbar-header.navbar-right
           li.dropdown
             a.drop-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -24,13 +24,25 @@ block content
             //- ideally next to this, when user is logged in, will say 'Welcome userFirstName!' to indicate logged in status
             ul.dropdown-menu
               li
-                a(href='#') Log In
+                a(href='#') Sign In
               li.divider(role='separator')
               li
-                a(href='#') Log Out
+                a(href='#') Sign Out
   .container-fluid
     .page-header.splashhead
         h1.pagetitle=  user.id
     .row
       .col-md-3
-        img(src='/images/defaultuser.jpg')
+        img.userpic(src='/images/defaultuser.jpg')
+      .col-md-3
+        p Username is currently:&nbsp;
+        .status
+          p current status will go here
+      .col-md-2.col-md-offset-3.text-right.profileButtons
+        a(href='/addContact', class='btn btn-success btn-sm', id='addContactButton') Add Contact
+        br
+        a(href='/edit', class='btn btn-info btn-sm', id='editProfileButton') Edit Profile
+    .row
+      .col-md-4
+        textarea(name='updatestatus')
+        
