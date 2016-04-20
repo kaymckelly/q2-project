@@ -77,3 +77,15 @@ h1, h2, h3, h4, h5, h6 {
 .userBox {
   text-align: center;
 }
+
+
+/* ------------- Registration Page ------------- */
+#regForm {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}
+
+.userTerms {
+  border: 1px solid #00B7FF;
+  padding: 10px;
+}
