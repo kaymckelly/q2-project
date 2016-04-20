@@ -1,8 +1,91 @@
+/* ------------- General Body Styling ------------- */
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-top: 70px;
+  font-family: "Droid Sans Mono", Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
 a {
   color: #00B7FF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Droid Sans Mono", Arial, sans-serif;
+}
+
+
+/* ------------- Navigation Bar ------------- */
+.navTitle {
+  margin-top: 23px;
+  text-shadow: 0 0 5px #00B7FF;
+}
+
+.navFlag {
+  margin-top: 10px;
+}
+
+.navmenu {
+  margin-top: 20px;
+}
+
+/*.navButtonRight {
+  margin-right: 20px;
+}*/
+
+.navDrop {
+  margin-right: 20px;
+}
+
+
+/* ------------- Splash Page ------------- */
+.splashhead {
+  text-align: center;
+}
+
+.pagetitle {
+  font-size: 80px;
+  font-stretch: expanded;
+  text-shadow: 0 0 20px #00B7FF;
+}
+
+.splashimg {
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 40px;
+}
+
+.splashdiv {
+  text-align: center;
+}
+
+#loginForm {
+  margin-top: 20px;
+}
+
+#registerButton {
+  margin-top: 20px;
+}
+
+
+/* ------------- All Users Page ------------- */
+.userpics {
+  border-radius: 100px;
+  max-width: 50%;
+}
+
+.userBox {
+  text-align: center;
+}
+
+
+/* ------------- Registration Page ------------- */
+#regForm {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}
+
+.userTerms {
+  border: 1px solid #00B7FF;
+  padding: 10px;
 }
