@@ -4,13 +4,11 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var knex = require('./db/knex');
-
+var session = require('cookie-session');
 var passport = require('passport');
+require('./config/passport');
 
 var port = process.env.PORT || 5000;
-
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -28,6 +26,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({ secret: 'friend-face' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(passport.initialize());
@@ -35,7 +34,7 @@ app.use(passport.session());
 
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/', users);
 app.use('/login', auth);
 
 // catch 404 and forward to error handler
@@ -71,6 +70,6 @@ app.use(function(err, req, res, next) {
 
 app.listen(port, () => {
   console.log('listening on ' + port);
-})
+});
 
 module.exports = app;
