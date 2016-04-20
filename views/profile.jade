@@ -16,7 +16,7 @@ block content
         li.navmenu(role='presentation')
           a(href='/users') All Users
         li.active.navmenu(role='presentation')
-          a(href='/users/:id') Me
+          a(href='/profile') Me
         ul.nav.navbar-nav.navbar-header.navbar-right
           li.dropdown
             a.drop-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -30,7 +30,7 @@ block content
                 a(href='#') Sign Out
   .container-fluid
     .page-header.splashhead
-        h1.pagetitle It's You!
+        h1.pagetitle=  user.id
     .row
       .col-md-3
         img.userpic(src='/images/defaultuser.jpg')
