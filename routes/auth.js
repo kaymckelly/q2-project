@@ -5,8 +5,15 @@ const passport = require('../config/passport');
 router = express.Router();
 
 router.post('/', passport.authenticate('local-login', {
-  successRedirect: '/profile',
   failureRedirect: '/'
-}));
+}), (req, res) => {
+  res.redirect('/profile/' + req.user.id);
+});
+
+router.get('/logout', (req, res) => {
+  req.session = null;
+  req.logout();
+  res.redirect('/');
+})
 
 module.exports = router;

@@ -35,7 +35,7 @@ app.use(passport.session());
 
 app.use('/', routes);
 app.use('/', users);
-app.use('/login', auth);
+app.use('/', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
