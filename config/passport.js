@@ -11,6 +11,8 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((user, done) => {
   Users.findById(user.id).then((user) => {
     done(null, user)
+  }).catch((err) => {
+    done(err);
   });
 });
 
@@ -40,7 +42,7 @@ passport.use('local-signup', new LocalStrategy({
 // =====================================================
 
 passport.use('local-login', new LocalStrategy({
-  usernameField: 'username',
+  usernameField: 'email',
   password: 'password',
   passReqToCallback: true
 }, (req, email, password, done) => {

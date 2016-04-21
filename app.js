@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('cookie-session');
 var passport = require('passport');
+require('./config/passport');
 
 var port = process.env.PORT || 5000;
 

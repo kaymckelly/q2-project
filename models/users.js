@@ -6,6 +6,10 @@ function Users() {
   return knex('users');
 }
 
+Users.getAll = () => {
+  return Users().select();
+}
+
 Users.createUser = (userData, callback) => {
   bcrypt.hash(userData.password, saltRounds, (err, hash) => {
     if (err) {
@@ -25,7 +29,7 @@ Users.createUser = (userData, callback) => {
 
 Users.authenticateUser = (email, password, callback) => {
   Users().where({ email: email}).first().then((user) => {
-    brcypt.compare(password, user.password_digest, (err, isMatch) => {
+    bcrypt.compare(password, user.password_digest, (err, isMatch) => {
       if (err || !isMatch) {
         return callback("Sorry, email and password do not match");
       }
