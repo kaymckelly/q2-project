@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('../config/passport');
+var Users = require('../models/users');
+
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
@@ -28,5 +30,11 @@ router.get('/edit', function(req, res, next) {
   res.render('edit');
 });
 
+router.get('/users', (req, res) => {
+  Users.getAll().then((users) => {
+    console.log(users);
+    res.render('users', { users: users });
+  });
+});
 
 module.exports = router;
