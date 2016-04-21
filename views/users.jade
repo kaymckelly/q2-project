@@ -31,13 +31,12 @@ block content
   .container-fluid
     .page-header.splashhead
         h1.pagetitle All Users
-    .row
-      .col-md-4.userBox
-        img.userpics(src='/images/defaultuser.jpg')
-        h5 User name
-      .col-md-4.userBox
-        img.userpics(src='/images/defaultuser.jpg')
-        h5 User name
-      .col-md-4.userBox
-        img.userpics(src='/images/defaultuser.jpg')
-        h5 User name
+    each user in users    
+      .row
+        .col-sm-4.userBox
+          img.userpics(src='/images/defaultuser.jpg')
+          
+        .col-sm-8.userBox
+          h2.email= user.email
+          p.user-id= user.id
+          p.blurb= user.blurb

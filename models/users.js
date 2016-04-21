@@ -6,6 +6,10 @@ function Users() {
   return knex('users');
 }
 
+Users.getAll = () => {
+  return Users().select();
+}
+
 Users.createUser = (userData, callback) => {
   bcrypt.hash(userData.password, saltRounds, (err, hash) => {
     if (err) {
