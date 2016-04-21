@@ -1,14 +1,14 @@
 const knex = require('../db/knex');
 const Users = require('../models/users')
 
-function Skills() = {
+function Skills() {
   return knex('skills');
 }
 
-function SkillsTeachers() = {
+function SkillsTeachers() {
   return knex('skills_teachers');
 }
-function SkillsLearners() = {
+function SkillsLearners() {
   return knex('users');
 }
 
