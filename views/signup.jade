@@ -30,7 +30,7 @@ block content
                 a(href='#') Sign Out
   .container-fluid
     .page-header.splashhead
-        h1.pagetitle Register
+        h1.pagetitle Sign Up
     .row
       .col-md-12.text-center
         p.text-default There's more to fill out on your profile, but for now we just need the basics.
@@ -38,24 +38,6 @@ block content
     .row
       .col-md-4.col-md-offset-4#regForm
         form#register(action='', method='post')
-          label First Name
-          //- I want this on the same freakin line!
-          //- p.text-danger *
-          br
-          input.form-control(type='text', name='firstname', placeholder='First Name')
-          br
-          label Last Name
-          br
-          input.form-control(type='text', name='lastname', placeholder='Last Name')
-          br
-          label Location
-          small.help-block Be as specific or as general as you like.
-          input.form-control(type='text', name='firstname', placeholder='Location')
-          br
-          label Upload a User Picture
-          br
-          input(type='file', name='userpic')
-          br
           label Email
           br
           input.form-control(type='email', name='email', placeholder='Email Address')
@@ -63,14 +45,5 @@ block content
           label Password
           br
           input.form-control(type='password', name='password', placeholder='Password')
-          br
-          label.text-info Terms & Conditions
-          br
-          p.userTerms We promise to never sell, rent, or otherwise share your information unless you tell us that's cool. We won't spy on you or tell the FBI anything unless you do something really bad. Please don't sue us; we're not a real company.
-          //- I want the label behind the checkbox
-          input(type='checkbox', name='terms', value='yes')
-          |         I have read, understood, and agreed to the terms listed above.
-          br
-          br
           br
           button(type='submit', class='btn btn-warning btn-lg') Sign Up
