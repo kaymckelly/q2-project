@@ -21,7 +21,7 @@
     "serve-favicon": "~2.3.0"
   },
   "description": "",
-  "main": "app.js",
+  "main": "./bin/www",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dianakim/q2-project.git"
