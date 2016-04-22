@@ -4,6 +4,10 @@ var knex = require('../db/knex');
 var passport = require('../config/passport');
 var Users = require('../models/users');
 
+function Users() {
+  return knex('users');
+}
+
 function Skills() {
   return knex('skills');
 }
@@ -23,9 +27,11 @@ router.get('/profile/:id', (req, res) => {
 });
 
 router.get('/profile/:id/edit', (req, res) => {
-  Skills().select('name').then((data) => {
+  const id = req.params.id;
+
+  Users().select().where({ id: id }).first().then((data) => {
     console.log(data);
-    res.render('edit', {allSkills: data})
+    res.render('edit', {user: data})
   });
 });
 

@@ -16,7 +16,8 @@ block content
         li.navmenu(role='presentation')
           a(href='/users') All Users
         li.active.navmenu(role='presentation')
-          a(href='/profile') Me
+          //this seems to work
+          a(href='/profile/' + user.id) Me
         ul.nav.navbar-nav.navbar-header.navbar-right
           li.dropdown
             a.drop-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -33,7 +34,10 @@ block content
         h1.pagetitle=  user.id
     .row
       .col-md-3
-        img.userpic(src='/images/defaultuser.jpg')
+        a(href= user.img_url, class='userpic') 
+        img.userpic(src= user.img_url)
+        br
+        img.userpic(src='/images/littleman.jpg')
       .col-md-3
         p Username is currently:&nbsp;
         .status

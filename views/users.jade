@@ -16,6 +16,7 @@ block content
         li.active.navmenu(role='presentation')
           a(href='/users') All Users
         li.navmenu(role='presentation')
+          //':id' needs to be corrected
           a(href='/users/:id') Me
         ul.nav.navbar-nav.navbar-header.navbar-right
           li.dropdown
@@ -34,9 +35,11 @@ block content
     each user in users    
       .row
         .col-sm-4.userBox
-          img.userpics(src='/images/defaultuser.jpg')
+          img.userpics(src='/images/loltastic.jpg')
+          //img.userpic(src= user.img_url)
           
         .col-sm-8.userBox
           h2.email= user.email
           p.user-id= user.id
           p.blurb= user.blurb
+          
