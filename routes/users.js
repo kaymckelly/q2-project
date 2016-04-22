@@ -79,7 +79,7 @@ router.post('/profile/:id/edit', function(req, res, next) {
 
 router.get('/users', (req, res) => {
   Users.getAll().then((users) => {
-    res.render('users', { users: users });
+    res.render('users', { users: users, user: req.user });
   });
 });
 

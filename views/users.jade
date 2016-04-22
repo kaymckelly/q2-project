@@ -1,34 +1,6 @@
 extends layout
 
 block content
-  .container
-    nav.navbar.navbar-default.navbar-fixed-top
-      .navbar-header
-        a.navbar-brand.navFlag(href='/')
-          span.glyphicon.glyphicon-flag(aria-hidden='true')
-      .navbar-header
-        h3.navTitle Friendface
-      a.navbar-brand
-        span.glyphicon.glyphicon-flag.navFlag(aria-hidden='true')
-      .nav.nav-tabs
-        li.navmenu(role='presentation')
-          a(href='/') Home
-        li.active.navmenu(role='presentation')
-          a(href='/users') All Users
-        li.navmenu(role='presentation')
-          //':id' needs to be corrected
-          a(href='/users/:id') Me
-        ul.nav.navbar-nav.navbar-header.navbar-right
-          li.dropdown
-            a.drop-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-              span.glyphicon.glyphicon-off.btn-sm.btn-info.navDrop(aria-hidden='true')
-            //- ideally next to this, when user is logged in, will say 'Welcome userFirstName!' to indicate logged in status
-            ul.dropdown-menu
-              li
-                a(href='#') Sign In
-              li.divider(role='separator')
-              li
-                a(href='#') Sign Out
   .container-fluid
     .page-header.splashhead
         h1.pagetitle All Users
