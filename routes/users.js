@@ -6,11 +6,19 @@ var Users = require('../models/users');
 
 function Users() {
   return knex('users');
-}
+};
 
 function Skills() {
   return knex('skills');
-}
+};
+
+function learnersSkills() {
+  return knex('skills_learners');
+};
+
+function teachersSkills() {
+  return knex('skills_teachers');
+};
 
 router.get('/signup', function(req, res, next) {
   res.render('signup');
