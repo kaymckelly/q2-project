@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .container-fluid
+    .page-header.splashhead
+        h1.pagetitle=  user.id
+    .row
+      .col-md-3
+        a(href= user.img_url, class='userpic') 
+        img.userpic(src= user.img_url)
+        br
+        img.userpic(src='/images/littleman.jpg')
+      .col-md-3
+        p Username is currently:&nbsp;
+        .status
+          p current status will go here
+      .col-md-2.col-md-offset-3.text-right.profileButtons
+        a(href='/addContact', class='btn btn-success btn-sm', id='addContactButton') Add Contact
+        br
+        a(href='/profile/' + user.id + '/edit', class='btn btn-info btn-sm', id='editProfileButton') Edit Profile
+    .row
+      .col-md-4
+        input(type='text', name='updatestatus', placeholder='Update your status here')
+        

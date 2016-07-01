@@ -69,3 +69,50 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ------------- All Users Page ------------- */
+.userpics {
+  border-radius: 100px;
+  max-width: 50%;
+}
+
+.userBox {
+  text-align: center;
+}
+
+
+/* ------------- Registration Page ------------- */
+#regForm {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}
+
+.userTerms {
+  border: 1px solid #00B7FF;
+  padding: 10px;
+}
+
+
+/* ------------- Profile Page ------------- */
+.userpic {
+  border-radius: 25px;
+  max-width: 75%;
+}
+
+.status {
+  border-radius: 25px;
+  border: 1px solid #00B7FF;
+  padding: 15px;
+}
+
+#addContactButton {
+  margin-bottom: 10px;
+}
+
+.profileButtons {
+}
+
+
+/* ------------- Edit Profile Page ------------- */
+#editForm {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}

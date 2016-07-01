@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .container-fluid
+    .page-header.splashhead
+        h1.pagetitle Sign Up
+    .row
+      .col-md-12.text-center
+        p.text-default There's more to fill out on your profile, but for now we just need the basics.
+        br
+    .row
+      .col-md-4.col-md-offset-4#regForm
+        form#register(action='', method='post')
+          label Email
+          br
+          input.form-control(type='email', name='email', placeholder='Email Address')
+          br
+          label Password
+          br
+          input.form-control(type='password', name='password', placeholder='Password')
+          br
+          input.form-control(type='img_url', name='img_url', placeholder='Link to Picture')
+          br
+          button(type='submit', class='btn btn-warning btn-lg') Sign Up

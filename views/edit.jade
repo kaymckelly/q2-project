@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .container-fluid
+    .page-header.splashhead
+        h1.pagetitle Edit My Profile
+    .row
+      .col-md-4.col-md-offset-4#editForm
+        //Need to be able to save edits
+        form#register(action='', method='post')
+          label Name
+          input.form-control(type='text', name='name', placeholder='Name', value= user.name)
+          br
+          label User Picture
+          input.form-control(type='URL', name='userpic', placeholder='Link to your desired user picture', value= user.img_url)
+          br
+          label Skills I Can Teach
+          input.form-control(type='text', name='teach', placeholder='Enter your skills, separated by commas')
+          br
+          label Skills I Want to Learn
+          input.form-control(type='text', name='learn', placeholder='Enter your skills, separated by commas')
+          br
+          button(type='submit', class='btn btn-warning btn-md') Edit My Profile
